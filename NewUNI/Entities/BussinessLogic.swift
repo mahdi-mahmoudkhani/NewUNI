@@ -10,12 +10,11 @@ import Foundation
 
 class BussinessLogic {
     
-    var allStudent : [Student]
-    var allProf    : [Prof]
+    var allStudent : [Student]? = nil
+    var allProf    : [Prof]?   = nil
+    var allCourses : [String]? = nil
     
-    init(allStudent: [Student], allProf: [Prof]) {
-        self.allStudent = allStudent
-        self.allProf = allProf
-    }
+    init() {
+       }
     
 }
