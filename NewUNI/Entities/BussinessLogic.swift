@@ -17,4 +17,5 @@ class BussinessLogic {
         self.allStudent = allStudent
         self.allProf = allProf
     }
+    
 }
