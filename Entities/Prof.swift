@@ -19,4 +19,15 @@ struct Prof {
         self.profID = profID
         self.supportStudents = supportStudents
     }
+    
+    func addStudent(_ newStudent: Student) {
+        
+        guard !self.supportStudents.contains(where: { student in
+            student.id == newStudent.id
+        }) else {
+            
+            return
+        }
+        self.supportStudents?.append(newStudent)
+    }
 }
