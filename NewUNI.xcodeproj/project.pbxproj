@@ -15,6 +15,7 @@
 		1144CFEC2C636A3100894698 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 1144CFEB2C636A3100894698 /* Base */; };
 		1918163E2C63741C00E63C32 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918163C2C63741C00E63C32 /* Student.swift */; };
 		1918163F2C63741C00E63C32 /* Prof.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918163D2C63741C00E63C32 /* Prof.swift */; };
+		191816412C63748300E63C32 /* BussinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191816402C63748300E63C32 /* BussinessLogic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		1144CFED2C636A3100894698 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1918163C2C63741C00E63C32 /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Student.swift; path = Entities/Student.swift; sourceTree = SOURCE_ROOT; };
 		1918163D2C63741C00E63C32 /* Prof.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Prof.swift; path = Entities/Prof.swift; sourceTree = SOURCE_ROOT; };
+		191816402C63748300E63C32 /* BussinessLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BussinessLogic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			children = (
 				1918163D2C63741C00E63C32 /* Prof.swift */,
 				1918163C2C63741C00E63C32 /* Student.swift */,
+				191816402C63748300E63C32 /* BussinessLogic.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 			files = (
 				1918163F2C63741C00E63C32 /* Prof.swift in Sources */,
 				1144CFE42C636A2F00894698 /* ViewController.swift in Sources */,
+				191816412C63748300E63C32 /* BussinessLogic.swift in Sources */,
 				1144CFE02C636A2F00894698 /* AppDelegate.swift in Sources */,
 				1144CFE22C636A2F00894698 /* SceneDelegate.swift in Sources */,
 				1918163E2C63741C00E63C32 /* Student.swift in Sources */,
