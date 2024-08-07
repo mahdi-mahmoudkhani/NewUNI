@@ -10,13 +10,13 @@ import Foundation
 struct Prof {
     let firstName: String
     let lastName: String
-    let profID: Int
+    let id: Int
     var supportStudents: [Student]?
     
-    init(firstName: String, lastName: String, profID: Int, supportStudents: [Student]? = nil) {
+    init(firstName: String, lastName: String, id: Int, supportStudents: [Student]? = nil) {
         self.firstName = firstName
         self.lastName = lastName
-        self.profID = profID
+        self.id = id
         self.supportStudents = supportStudents
     }
     
