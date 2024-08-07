@@ -11,7 +11,7 @@ struct Student {
     let firstName : String
     let lastName : String
     var selectetedCourse : [String]?
-    private let id : Int
+    let id : Int
 
     init(firstName : String, lastName : String, id : Int, selectetedCourse : [String]? = nil) {
         self.firstName = firstName
