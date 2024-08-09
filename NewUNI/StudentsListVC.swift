@@ -9,11 +9,12 @@ import UIKit
 
 class StudentsListVC: UIViewController {
     
-    let bussinessLogic = BussinessLogic()
-    var allStudents: [Student] { 
+    var bussinessLogic = BussinessLogic()
+    var allStudents: [Student] {
         return bussinessLogic.allStudent ?? []
     }
     
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var newStudentFirstNameField: UITextField!
     @IBOutlet weak var newStudentLastNameField: UITextField!
     @IBOutlet weak var addNewStudentButton: UIButton!
@@ -31,6 +32,28 @@ class StudentsListVC: UIViewController {
         searchStudentButton.isEnabled = addNewStudentButton.isEnabled
     }
     
+    @IBAction func addNewStudent(_ sender: Any) {
+        
+        if !allStudents.contains(where: { 
+            
+            $0.firstName == newStudentFirstNameField.text
+            && $0.lastName == newStudentLastNameField.text
+        }) {
+            
+            if bussinessLogic.allStudent == nil { bussinessLogic.allStudent = [] }
+            
+            bussinessLogic.allStudent!.append( Student(firstName: newStudentFirstNameField.text!, lastName: newStudentLastNameField.text!, id: Int(Date().timeIntervalSince1970)) )
+            
+            newStudentFirstNameField.text = ""
+            newStudentLastNameField.text = ""
+            
+            tableView.reloadData()
+            
+        } else {
+            
+            return
+        }
+    }
 }
 
 extension StudentsListVC: UITableViewDelegate, UITableViewDataSource {

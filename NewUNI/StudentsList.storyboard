@@ -70,6 +70,9 @@
                                 <rect key="frame" x="30" y="722" width="163" height="39"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Add New Student"/>
+                                <connections>
+                                    <action selector="addNewStudent:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="aDk-ff-VL9"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlZ-Hp-Jp0">
                                 <rect key="frame" x="203" y="722" width="160" height="39"/>
@@ -105,6 +108,7 @@
                         <outlet property="newStudentFirstNameField" destination="BkM-tc-STw" id="Dor-NM-wcw"/>
                         <outlet property="newStudentLastNameField" destination="48W-eP-luc" id="P5i-Gr-eyg"/>
                         <outlet property="searchStudentButton" destination="mlZ-Hp-Jp0" id="Smh-eZ-eUL"/>
+                        <outlet property="tableView" destination="qwT-U1-oM2" id="d79-RT-icI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
