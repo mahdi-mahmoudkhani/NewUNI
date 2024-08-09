@@ -8,7 +8,9 @@
 import UIKit
 
 class StudentsDetailVC: UIViewController {
-
+    
+    var student: Student?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

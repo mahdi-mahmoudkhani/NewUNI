@@ -27,6 +27,15 @@ class StudentsListVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "ToStudentsDetailVC" {
+            if let destinationVC = segue.destination as? StudentsDetailVC {
+                destinationVC.student = sender as? Student
+            }
+        }
+    }
+    
     @IBAction func StudentDataCompleted(_ sender: Any) {
         
         addNewStudentButton.isEnabled = newStudentLastNameField.text != "" && newStudentFirstNameField.text != ""
@@ -91,7 +100,7 @@ extension StudentsListVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        performSegue(withIdentifier: "ToStudentsDetailVC", sender: nil)
+        performSegue(withIdentifier: "ToStudentsDetailVC", sender: filterredStudentsList[indexPath.row])
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
