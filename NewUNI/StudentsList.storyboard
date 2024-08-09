@@ -101,10 +101,10 @@
                     </view>
                     <navigationItem key="navigationItem" title="Students" id="hG6-xo-yFy"/>
                     <connections>
-                        <outlet property="addNewStudentBottom" destination="UQZ-Z2-1SY" id="p9k-3H-3gk"/>
+                        <outlet property="addNewStudentButton" destination="UQZ-Z2-1SY" id="3vc-te-pe0"/>
                         <outlet property="newStudentFirstNameField" destination="BkM-tc-STw" id="Dor-NM-wcw"/>
                         <outlet property="newStudentLastNameField" destination="48W-eP-luc" id="P5i-Gr-eyg"/>
-                        <outlet property="searchStudentBottom" destination="mlZ-Hp-Jp0" id="2yL-iy-ZI6"/>
+                        <outlet property="searchStudentButton" destination="mlZ-Hp-Jp0" id="Smh-eZ-eUL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

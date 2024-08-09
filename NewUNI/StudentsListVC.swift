@@ -16,8 +16,8 @@ class StudentsListVC: UIViewController {
     
     @IBOutlet weak var newStudentFirstNameField: UITextField!
     @IBOutlet weak var newStudentLastNameField: UITextField!
-    @IBOutlet weak var addNewStudentBottom: UIButton!
-    @IBOutlet weak var searchStudentBottom: UIButton!
+    @IBOutlet weak var addNewStudentButton: UIButton!
+    @IBOutlet weak var searchStudentButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,8 +27,8 @@ class StudentsListVC: UIViewController {
     
     @IBAction func StudentDataCompleted(_ sender: Any) {
         
-        addNewStudentBottom.isEnabled = newStudentLastNameField.text != "" && newStudentFirstNameField.text != ""
-        searchStudentBottom.isEnabled = addNewStudentBottom.isEnabled
+        addNewStudentButton.isEnabled = newStudentLastNameField.text != "" && newStudentFirstNameField.text != ""
+        searchStudentButton.isEnabled = addNewStudentButton.isEnabled
     }
     
 }
