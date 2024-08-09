@@ -13,6 +13,7 @@ class StudentsListVC: UIViewController {
     var allStudents: [Student] {
         return bussinessLogic.allStudent ?? []
     }
+    var filterredStudentsList: [Student] = []
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var newStudentFirstNameField: UITextField!
@@ -46,6 +47,8 @@ class StudentsListVC: UIViewController {
             newStudentFirstNameField.text = ""
             newStudentLastNameField.text = ""
             
+            filterredStudentsList = allStudents
+            
             tableView.reloadData()
             
         } else {
@@ -53,13 +56,26 @@ class StudentsListVC: UIViewController {
             return
         }
     }
+    
+    @IBAction func searchStudents(_ sender: Any) {
+        
+        filterredStudentsList = allStudents.filter({ student in
+            
+            let matchedFirstName = newStudentFirstNameField.text == "" || student.firstName.uppercased().contains( (newStudentFirstNameField.text?.uppercased())! )
+            let matchedLastName = newStudentLastNameField.text == "" || student.lastName.uppercased().contains( (newStudentLastNameField.text?.uppercased())! )
+            
+            return matchedLastName && matchedFirstName
+        })
+        
+        tableView.reloadData()
+    }
 }
 
 extension StudentsListVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return self.allStudents.count
+        return self.filterredStudentsList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -68,8 +84,8 @@ extension StudentsListVC: UITableViewDelegate, UITableViewDataSource {
             
             return UITableViewCell()
         }
-        cell.textLabel?.text = allStudents[indexPath.row].firstName
-        cell.detailTextLabel?.text = allStudents[indexPath.row].lastName
+        cell.textLabel?.text = filterredStudentsList[indexPath.row].firstName
+        cell.detailTextLabel?.text = filterredStudentsList[indexPath.row].lastName
         return cell
     }
 }

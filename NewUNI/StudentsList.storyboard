@@ -79,6 +79,9 @@
                                 <color key="tintColor" systemColor="systemPinkColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Search Student"/>
+                                <connections>
+                                    <action selector="searchStudents:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="QHV-zH-zMp"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
