@@ -98,8 +98,18 @@ extension StudentsListVC: UITableViewDelegate, UITableViewDataSource {
         
         if editingStyle == .delete {
         
+            removeStudent(stuID: filterredStudentsList[indexPath.row].id)
             filterredStudentsList.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
+    }
+    
+    private func removeStudent(stuID: Int) {
+        
+        let stuIndex = bussinessLogic.allStudent?.firstIndex(where: { student in
+            student.id == stuID
+        })
+        
+        bussinessLogic.allStudent?.remove(at: stuIndex!)
     }
 }
