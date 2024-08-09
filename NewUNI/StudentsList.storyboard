@@ -71,6 +71,12 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Add New Student"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlZ-Hp-Jp0">
+                                <rect key="frame" x="203" y="722" width="160" height="39"/>
+                                <color key="tintColor" systemColor="systemPinkColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Search Student"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -79,12 +85,15 @@
                             <constraint firstItem="UQZ-Z2-1SY" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="8e3-d1-gCs"/>
                             <constraint firstItem="BkM-tc-STw" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="D8A-bQ-xJq"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="qwT-U1-oM2" secondAttribute="bottom" constant="150" id="KdU-WZ-5FV"/>
+                            <constraint firstItem="mlZ-Hp-Jp0" firstAttribute="top" secondItem="48W-eP-luc" secondAttribute="bottom" constant="10" id="LZZ-W8-ZHM"/>
                             <constraint firstItem="qwT-U1-oM2" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="MdO-AE-Bab"/>
                             <constraint firstItem="48W-eP-luc" firstAttribute="leading" secondItem="BkM-tc-STw" secondAttribute="trailing" constant="10" id="Uom-fO-Wue"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="48W-eP-luc" secondAttribute="trailing" constant="30" id="VRR-EX-pj8"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="qwT-U1-oM2" secondAttribute="trailing" id="X47-yf-bDz"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="UQZ-Z2-1SY" secondAttribute="trailing" constant="200" id="bQh-4c-Mwo"/>
+                            <constraint firstItem="mlZ-Hp-Jp0" firstAttribute="leading" secondItem="UQZ-Z2-1SY" secondAttribute="trailing" constant="10" id="ced-gJ-nIl"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="BkM-tc-STw" secondAttribute="trailing" constant="200" id="e7Y-YM-xd2"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="mlZ-Hp-Jp0" secondAttribute="trailing" constant="30" id="jAa-QO-3TK"/>
                             <constraint firstItem="qwT-U1-oM2" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="v6F-Fq-Hyf"/>
                             <constraint firstItem="UQZ-Z2-1SY" firstAttribute="top" secondItem="BkM-tc-STw" secondAttribute="bottom" constant="10" id="xXj-WT-Itj"/>
                             <constraint firstItem="BkM-tc-STw" firstAttribute="top" secondItem="qwT-U1-oM2" secondAttribute="bottom" constant="10" id="yjF-ku-RbX"/>
@@ -95,6 +104,7 @@
                         <outlet property="addNewStudentBottom" destination="UQZ-Z2-1SY" id="p9k-3H-3gk"/>
                         <outlet property="newStudentFirstNameField" destination="BkM-tc-STw" id="Dor-NM-wcw"/>
                         <outlet property="newStudentLastNameField" destination="48W-eP-luc" id="P5i-Gr-eyg"/>
+                        <outlet property="searchStudentBottom" destination="mlZ-Hp-Jp0" id="2yL-iy-ZI6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -123,6 +133,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
