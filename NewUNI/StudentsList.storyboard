@@ -170,6 +170,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="newCourseField:" destination="3WA-gc-nQi" eventType="editingChanged" id="WD1-9h-ncD"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9p2-39-hek">
                                 <rect key="frame" x="203" y="678" width="160" height="39"/>
