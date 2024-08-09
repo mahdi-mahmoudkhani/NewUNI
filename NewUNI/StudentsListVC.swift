@@ -8,7 +8,12 @@
 import UIKit
 
 class StudentsListVC: UIViewController {
-
+    
+    let bussinessLogic = BussinessLogic()
+    var allStudents: [Student] { 
+        return bussinessLogic.allStudent ?? []
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,7 +37,7 @@ extension StudentsListVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 50
+        return self.allStudents.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -41,7 +46,8 @@ extension StudentsListVC: UITableViewDelegate, UITableViewDataSource {
             
             return UITableViewCell()
         }
-        
+        cell.textLabel?.text = allStudents[indexPath.row].firstName
+        cell.detailTextLabel?.text = allStudents[indexPath.row].lastName
         return cell
     }
 }
