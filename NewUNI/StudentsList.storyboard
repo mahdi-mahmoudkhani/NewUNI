@@ -112,11 +112,28 @@
                         <outlet property="newStudentLastNameField" destination="48W-eP-luc" id="P5i-Gr-eyg"/>
                         <outlet property="searchStudentButton" destination="mlZ-Hp-Jp0" id="Smh-eZ-eUL"/>
                         <outlet property="tableView" destination="qwT-U1-oM2" id="d79-RT-icI"/>
+                        <segue destination="3WA-gc-nQi" kind="show" identifier="ToStudentDetailVC" id="Hpc-q4-HRP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="983.96946564885491" y="-2.1126760563380285"/>
+        </scene>
+        <!--Students DetailVC-->
+        <scene sceneID="u0C-Bw-V23">
+            <objects>
+                <viewController id="3WA-gc-nQi" customClass="StudentsDetailVC" customModule="NewUNI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XXm-JI-J12">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="TZI-03-bJp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="sdy-4X-C1q"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eWJ-85-ZO7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1932" y="-2"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tum-dN-hpJ">

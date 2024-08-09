@@ -88,4 +88,9 @@ extension StudentsListVC: UITableViewDelegate, UITableViewDataSource {
         cell.detailTextLabel?.text = filterredStudentsList[indexPath.row].lastName
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        performSegue(withIdentifier: "ToStudentsDetailVC", sender: nil)
+    }
 }
