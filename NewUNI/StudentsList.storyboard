@@ -163,24 +163,45 @@
                                     <outlet property="delegate" destination="3WA-gc-nQi" id="Z3n-OK-qm6"/>
                                 </connections>
                             </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New Course" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NUg-Bm-gwI">
+                                <rect key="frame" x="30" y="678" width="163" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="30b-5k-Eos"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9p2-39-hek">
+                                <rect key="frame" x="203" y="678" width="160" height="39"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Add Course"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TZI-03-bJp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="TZI-03-bJp" firstAttribute="bottom" secondItem="XgY-rK-VKn" secondAttribute="bottom" constant="150" id="1sH-sL-RN8"/>
+                            <constraint firstItem="NUg-Bm-gwI" firstAttribute="top" secondItem="XgY-rK-VKn" secondAttribute="bottom" constant="10" id="2Ww-XQ-hzw"/>
                             <constraint firstItem="6sy-b9-22r" firstAttribute="leading" secondItem="TZI-03-bJp" secondAttribute="leading" constant="30" id="4ID-5u-1Xi"/>
                             <constraint firstItem="TZI-03-bJp" firstAttribute="trailing" secondItem="6sy-b9-22r" secondAttribute="trailing" constant="30" id="BW9-Aq-ZEd"/>
                             <constraint firstItem="gdG-bI-Vr1" firstAttribute="top" secondItem="6sy-b9-22r" secondAttribute="bottom" id="CD0-CJ-nTT"/>
                             <constraint firstItem="TZI-03-bJp" firstAttribute="trailing" secondItem="XgY-rK-VKn" secondAttribute="trailing" constant="30" id="CNG-OL-UmE"/>
                             <constraint firstItem="6sy-b9-22r" firstAttribute="top" secondItem="TZI-03-bJp" secondAttribute="top" id="LIo-nl-fp9"/>
+                            <constraint firstItem="9p2-39-hek" firstAttribute="leading" secondItem="NUg-Bm-gwI" secondAttribute="trailing" constant="10" id="Ncz-vf-8Df"/>
                             <constraint firstItem="XgY-rK-VKn" firstAttribute="leading" secondItem="TZI-03-bJp" secondAttribute="leading" constant="30" id="Ov9-3O-w0Y"/>
+                            <constraint firstItem="TZI-03-bJp" firstAttribute="trailing" secondItem="9p2-39-hek" secondAttribute="trailing" constant="30" id="VQE-dq-LRt"/>
+                            <constraint firstItem="NUg-Bm-gwI" firstAttribute="leading" secondItem="TZI-03-bJp" secondAttribute="leading" constant="30" id="XWc-Q7-WAY"/>
                             <constraint firstItem="TZI-03-bJp" firstAttribute="trailing" secondItem="gdG-bI-Vr1" secondAttribute="trailing" constant="30" id="bZA-VU-0PK"/>
+                            <constraint firstItem="TZI-03-bJp" firstAttribute="trailing" secondItem="NUg-Bm-gwI" secondAttribute="trailing" constant="200" id="hPg-R9-JAi"/>
                             <constraint firstItem="XgY-rK-VKn" firstAttribute="top" secondItem="gdG-bI-Vr1" secondAttribute="bottom" constant="10" id="iug-ok-N2Q"/>
                             <constraint firstItem="gdG-bI-Vr1" firstAttribute="leading" secondItem="TZI-03-bJp" secondAttribute="leading" constant="30" id="xvf-YX-gMT"/>
+                            <constraint firstItem="9p2-39-hek" firstAttribute="top" secondItem="XgY-rK-VKn" secondAttribute="bottom" constant="10" id="zBA-Pd-pFi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Student Full Name" id="sdy-4X-C1q"/>
                     <connections>
+                        <outlet property="addCourseButton" destination="9p2-39-hek" id="xNf-aY-qOv"/>
+                        <outlet property="newCourseField" destination="NUg-Bm-gwI" id="rrw-k8-01P"/>
                         <outlet property="profNameField" destination="gdG-bI-Vr1" id="Db4-PL-oEb"/>
                         <outlet property="studentIdField" destination="6sy-b9-22r" id="vR9-pT-mZs"/>
                         <outlet property="tableView" destination="XgY-rK-VKn" id="wLc-DJ-LLw"/>

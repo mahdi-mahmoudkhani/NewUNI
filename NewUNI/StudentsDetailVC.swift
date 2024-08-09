@@ -14,6 +14,8 @@ class StudentsDetailVC: UIViewController {
     @IBOutlet weak var studentIdField: UILabel!
     @IBOutlet weak var profNameField: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var newCourseField: UITextField!
+    @IBOutlet weak var addCourseButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
