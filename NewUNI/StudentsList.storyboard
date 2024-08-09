@@ -60,24 +60,33 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQZ-Z2-1SY">
+                                <rect key="frame" x="30" y="722" width="163" height="39"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Add New Student"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="48W-eP-luc" firstAttribute="top" secondItem="qwT-U1-oM2" secondAttribute="bottom" constant="10" id="2tw-fF-bH9"/>
+                            <constraint firstItem="UQZ-Z2-1SY" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="8e3-d1-gCs"/>
                             <constraint firstItem="BkM-tc-STw" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="D8A-bQ-xJq"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="qwT-U1-oM2" secondAttribute="bottom" constant="150" id="KdU-WZ-5FV"/>
                             <constraint firstItem="qwT-U1-oM2" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="MdO-AE-Bab"/>
                             <constraint firstItem="48W-eP-luc" firstAttribute="leading" secondItem="BkM-tc-STw" secondAttribute="trailing" constant="10" id="Uom-fO-Wue"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="48W-eP-luc" secondAttribute="trailing" constant="30" id="VRR-EX-pj8"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="qwT-U1-oM2" secondAttribute="trailing" id="X47-yf-bDz"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="UQZ-Z2-1SY" secondAttribute="trailing" constant="200" id="bQh-4c-Mwo"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="BkM-tc-STw" secondAttribute="trailing" constant="200" id="e7Y-YM-xd2"/>
                             <constraint firstItem="qwT-U1-oM2" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="v6F-Fq-Hyf"/>
+                            <constraint firstItem="UQZ-Z2-1SY" firstAttribute="top" secondItem="BkM-tc-STw" secondAttribute="bottom" constant="10" id="xXj-WT-Itj"/>
                             <constraint firstItem="BkM-tc-STw" firstAttribute="top" secondItem="qwT-U1-oM2" secondAttribute="bottom" constant="10" id="yjF-ku-RbX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Students" id="hG6-xo-yFy"/>
                     <connections>
+                        <outlet property="addNewStudentBottom" destination="UQZ-Z2-1SY" id="p9k-3H-3gk"/>
                         <outlet property="newStudentFirstNameField" destination="BkM-tc-STw" id="A7e-1T-qCl"/>
                         <outlet property="newStudentLastNameField" destination="48W-eP-luc" id="uUQ-kQ-dnt"/>
                     </connections>

@@ -16,6 +16,7 @@ class StudentsListVC: UIViewController {
     
     @IBOutlet weak var newStudentFirstNameField: UITextField!
     @IBOutlet weak var newStudentLastNameField: UITextField!
+    @IBOutlet weak var addNewStudentBottom: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
