@@ -74,7 +74,7 @@
                                     <action selector="addNewStudent:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="aDk-ff-VL9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlZ-Hp-Jp0">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlZ-Hp-Jp0">
                                 <rect key="frame" x="203" y="722" width="160" height="39"/>
                                 <color key="tintColor" systemColor="systemPinkColor"/>
                                 <state key="normal" title="Button"/>

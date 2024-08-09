@@ -29,7 +29,6 @@ class StudentsListVC: UIViewController {
     @IBAction func StudentDataCompleted(_ sender: Any) {
         
         addNewStudentButton.isEnabled = newStudentLastNameField.text != "" && newStudentFirstNameField.text != ""
-        searchStudentButton.isEnabled = addNewStudentButton.isEnabled
     }
     
     @IBAction func addNewStudent(_ sender: Any) {
