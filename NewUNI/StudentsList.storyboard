@@ -145,15 +145,37 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="XgY-rK-VKn">
+                                <rect key="frame" x="30" y="245" width="333" height="423"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="CourseCell" id="Syi-UY-dUt">
+                                        <rect key="frame" x="0.0" y="50" width="333" height="47.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Syi-UY-dUt" id="yKh-lm-t2x">
+                                            <rect key="frame" x="0.0" y="0.0" width="333" height="47.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="3WA-gc-nQi" id="rRT-Fd-F9s"/>
+                                    <outlet property="delegate" destination="3WA-gc-nQi" id="Z3n-OK-qm6"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TZI-03-bJp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="TZI-03-bJp" firstAttribute="bottom" secondItem="XgY-rK-VKn" secondAttribute="bottom" constant="150" id="1sH-sL-RN8"/>
                             <constraint firstItem="6sy-b9-22r" firstAttribute="leading" secondItem="TZI-03-bJp" secondAttribute="leading" constant="30" id="4ID-5u-1Xi"/>
                             <constraint firstItem="TZI-03-bJp" firstAttribute="trailing" secondItem="6sy-b9-22r" secondAttribute="trailing" constant="30" id="BW9-Aq-ZEd"/>
                             <constraint firstItem="gdG-bI-Vr1" firstAttribute="top" secondItem="6sy-b9-22r" secondAttribute="bottom" id="CD0-CJ-nTT"/>
+                            <constraint firstItem="TZI-03-bJp" firstAttribute="trailing" secondItem="XgY-rK-VKn" secondAttribute="trailing" constant="30" id="CNG-OL-UmE"/>
                             <constraint firstItem="6sy-b9-22r" firstAttribute="top" secondItem="TZI-03-bJp" secondAttribute="top" id="LIo-nl-fp9"/>
+                            <constraint firstItem="XgY-rK-VKn" firstAttribute="leading" secondItem="TZI-03-bJp" secondAttribute="leading" constant="30" id="Ov9-3O-w0Y"/>
                             <constraint firstItem="TZI-03-bJp" firstAttribute="trailing" secondItem="gdG-bI-Vr1" secondAttribute="trailing" constant="30" id="bZA-VU-0PK"/>
+                            <constraint firstItem="XgY-rK-VKn" firstAttribute="top" secondItem="gdG-bI-Vr1" secondAttribute="bottom" constant="10" id="iug-ok-N2Q"/>
                             <constraint firstItem="gdG-bI-Vr1" firstAttribute="leading" secondItem="TZI-03-bJp" secondAttribute="leading" constant="30" id="xvf-YX-gMT"/>
                         </constraints>
                     </view>
@@ -161,6 +183,7 @@
                     <connections>
                         <outlet property="profNameField" destination="gdG-bI-Vr1" id="Db4-PL-oEb"/>
                         <outlet property="studentIdField" destination="6sy-b9-22r" id="vR9-pT-mZs"/>
+                        <outlet property="tableView" destination="XgY-rK-VKn" id="wLc-DJ-LLw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eWJ-85-ZO7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

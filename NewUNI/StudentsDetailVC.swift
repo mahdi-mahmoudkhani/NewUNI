@@ -13,6 +13,7 @@ class StudentsDetailVC: UIViewController {
     
     @IBOutlet weak var studentIdField: UILabel!
     @IBOutlet weak var profNameField: UILabel!
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,4 +34,31 @@ class StudentsDetailVC: UIViewController {
     }
     */
 
+}
+
+extension StudentsDetailVC: UITabBarDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        guard let cnt = student?.selectetedCourse?.count else {
+            
+            return 0
+        }
+        
+        return cnt
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CourseCell") else {
+            
+            return UITableViewCell()
+        }
+        cell.textLabel?.text = student?.selectetedCourse![indexPath.row]
+        
+        return cell
+    }
+    
+    
+    
 }
