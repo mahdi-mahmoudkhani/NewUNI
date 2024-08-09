@@ -119,17 +119,36 @@
             </objects>
             <point key="canvasLocation" x="983.96946564885491" y="-2.1126760563380285"/>
         </scene>
-        <!--Students DetailVC-->
+        <!--Student Full Name-->
         <scene sceneID="u0C-Bw-V23">
             <objects>
                 <viewController id="3WA-gc-nQi" customClass="StudentsDetailVC" customModule="NewUNI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XXm-JI-J12">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Student ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6sy-b9-22r">
+                                <rect key="frame" x="30" y="155" width="333" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="IXk-Ry-RvE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="TZI-03-bJp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6sy-b9-22r" firstAttribute="leading" secondItem="TZI-03-bJp" secondAttribute="leading" constant="30" id="4ID-5u-1Xi"/>
+                            <constraint firstItem="TZI-03-bJp" firstAttribute="trailing" secondItem="6sy-b9-22r" secondAttribute="trailing" constant="30" id="BW9-Aq-ZEd"/>
+                            <constraint firstItem="6sy-b9-22r" firstAttribute="top" secondItem="TZI-03-bJp" secondAttribute="top" id="LIo-nl-fp9"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="sdy-4X-C1q"/>
+                    <navigationItem key="navigationItem" title="Student Full Name" id="sdy-4X-C1q"/>
+                    <connections>
+                        <outlet property="studentIdField" destination="6sy-b9-22r" id="PZo-NX-l1l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eWJ-85-ZO7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
