@@ -112,7 +112,7 @@
                         <outlet property="newStudentLastNameField" destination="48W-eP-luc" id="P5i-Gr-eyg"/>
                         <outlet property="searchStudentButton" destination="mlZ-Hp-Jp0" id="Smh-eZ-eUL"/>
                         <outlet property="tableView" destination="qwT-U1-oM2" id="d79-RT-icI"/>
-                        <segue destination="3WA-gc-nQi" kind="show" identifier="ToStudentDetailVC" id="Hpc-q4-HRP"/>
+                        <segue destination="3WA-gc-nQi" kind="show" identifier="ToStudentsDetailVC" id="Hpc-q4-HRP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

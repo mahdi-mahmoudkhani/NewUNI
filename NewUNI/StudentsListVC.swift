@@ -93,4 +93,13 @@ extension StudentsListVC: UITableViewDelegate, UITableViewDataSource {
         
         performSegue(withIdentifier: "ToStudentsDetailVC", sender: nil)
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete {
+        
+            filterredStudentsList.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
 }
