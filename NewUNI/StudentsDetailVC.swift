@@ -12,11 +12,13 @@ class StudentsDetailVC: UIViewController {
     var student: Student?
     
     @IBOutlet weak var studentIdField: UILabel!
+    @IBOutlet weak var profNameField: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = student?.firstName.appending(" " + student!.lastName)
         studentIdField.text = "ID: \(String(describing: student!.id))"
+        profNameField.text = "Prof ID: \(String(describing: student!.profId))"
         // Do any additional setup after loading the view.
     }
     
