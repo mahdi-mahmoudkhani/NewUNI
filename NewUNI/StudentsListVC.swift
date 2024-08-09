@@ -27,3 +27,21 @@ class StudentsListVC: UIViewController {
     */
 
 }
+
+extension StudentsListVC: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return 50
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "StudentCell") else {
+            
+            return UITableViewCell()
+        }
+        
+        return cell
+    }
+}
