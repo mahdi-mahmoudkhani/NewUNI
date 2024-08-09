@@ -14,6 +14,9 @@ class StudentsListVC: UIViewController {
         return bussinessLogic.allStudent ?? []
     }
     
+    @IBOutlet weak var newStudentFirstNameField: UITextField!
+    @IBOutlet weak var newStudentLastNameField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
