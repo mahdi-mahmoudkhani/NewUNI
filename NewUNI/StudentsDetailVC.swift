@@ -19,32 +19,32 @@ class StudentsDetailVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = student?.firstName.appending(" " + student!.lastName)
-        studentIdField.text = "ID: \(String(describing: student!.id))"
-        profNameField.text = "Prof ID: \(String(describing: student!.profId))"
+        self.title = self.student?.firstName.appending(" " + self.student!.lastName)
+        self.studentIdField.text = "ID: \(String(describing: self.student!.id))"
+        self.profNameField.text = "Prof ID: \(String(describing: self.student!.profId))"
         // Do any additional setup after loading the view.
     }
     
     @IBAction func newCourseField(_ sender: Any) {
         
-        addCourseButton.isEnabled = newCourseField.text != ""
+        self.addCourseButton.isEnabled = self.newCourseField.text != ""
     }
     
     @IBAction func addCourse(_ sender: Any) {
         
-        if let isThere = student?.selectetedCourse?.contains(where: { $0 == newCourseField.text } ) {
+        if (self.student?.selectetedCourse?.contains(where: { $0 == self.newCourseField.text } )) != nil {
             
             return
         }
         
-        if student?.selectetedCourse == nil {
+        if self.student?.selectetedCourse == nil {
             
-            student?.selectetedCourse = []
+            self.student?.selectetedCourse = []
         }
         
-        student?.selectetedCourse?.append(newCourseField.text!)
-        newCourseField.text = ""
-        tableView.reloadData()
+        self.student?.selectetedCourse?.append(self.newCourseField.text!)
+        self.newCourseField.text = ""
+        self.tableView.reloadData()
     }
 }
 
@@ -52,7 +52,7 @@ extension StudentsDetailVC: UITabBarDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        guard let cnt = student?.selectetedCourse?.count else {
+        guard let cnt = self.student?.selectetedCourse?.count else {
             
             return 0
         }
@@ -66,7 +66,7 @@ extension StudentsDetailVC: UITabBarDelegate, UITableViewDataSource {
             
             return UITableViewCell()
         }
-        cell.textLabel?.text = student?.selectetedCourse![indexPath.row]
+        cell.textLabel?.text = self.student?.selectetedCourse![indexPath.row]
         
         return cell
     }

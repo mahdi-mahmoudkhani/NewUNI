@@ -11,7 +11,7 @@ class StudentsListVC: UIViewController {
     
     var bussinessLogic = BussinessLogic()
     var allStudents: [Student] {
-        return bussinessLogic.allStudent ?? []
+        return self.bussinessLogic.allStudent ?? []
     }
     var filterredStudentsList: [Student] = []
     
@@ -38,27 +38,27 @@ class StudentsListVC: UIViewController {
     
     @IBAction func StudentDataCompleted(_ sender: Any) {
         
-        addNewStudentButton.isEnabled = newStudentLastNameField.text != "" && newStudentFirstNameField.text != ""
+        self.addNewStudentButton.isEnabled = self.newStudentLastNameField.text != "" && self.newStudentFirstNameField.text != ""
     }
     
     @IBAction func addNewStudent(_ sender: Any) {
         
-        if !allStudents.contains(where: { 
+        if !self.allStudents.contains(where: {
             
-            $0.firstName == newStudentFirstNameField.text
-            && $0.lastName == newStudentLastNameField.text
+            $0.firstName == self.newStudentFirstNameField.text
+            && $0.lastName == self.newStudentLastNameField.text
         }) {
             
-            if bussinessLogic.allStudent == nil { bussinessLogic.allStudent = [] }
+            if self.bussinessLogic.allStudent == nil { self.bussinessLogic.allStudent = [] }
             
-            bussinessLogic.allStudent!.append( Student(firstName: newStudentFirstNameField.text!, lastName: newStudentLastNameField.text!, id: Int(Date().timeIntervalSince1970)) )
+            self.bussinessLogic.allStudent!.append( Student(firstName: self.newStudentFirstNameField.text!, lastName: self.newStudentLastNameField.text!, id: Int(Date().timeIntervalSince1970)) )
             
-            newStudentFirstNameField.text = ""
-            newStudentLastNameField.text = ""
+            self.newStudentFirstNameField.text = ""
+            self.newStudentLastNameField.text = ""
             
-            filterredStudentsList = allStudents
+            self.filterredStudentsList = self.allStudents
             
-            tableView.reloadData()
+            self.tableView.reloadData()
             
         } else {
             
@@ -68,15 +68,15 @@ class StudentsListVC: UIViewController {
     
     @IBAction func searchStudents(_ sender: Any) {
         
-        filterredStudentsList = allStudents.filter({ student in
+        self.filterredStudentsList = self.allStudents.filter({ student in
             
-            let matchedFirstName = newStudentFirstNameField.text == "" || student.firstName.uppercased().contains( (newStudentFirstNameField.text?.uppercased())! )
-            let matchedLastName = newStudentLastNameField.text == "" || student.lastName.uppercased().contains( (newStudentLastNameField.text?.uppercased())! )
+            let matchedFirstName = self.newStudentFirstNameField.text == "" || student.firstName.uppercased().contains( (self.newStudentFirstNameField.text?.uppercased())! )
+            let matchedLastName = self.newStudentLastNameField.text == "" || student.lastName.uppercased().contains( (self.newStudentLastNameField.text?.uppercased())! )
             
             return matchedLastName && matchedFirstName
         })
         
-        tableView.reloadData()
+        self.tableView.reloadData()
     }
 }
 
@@ -93,32 +93,32 @@ extension StudentsListVC: UITableViewDelegate, UITableViewDataSource {
             
             return UITableViewCell()
         }
-        cell.textLabel?.text = filterredStudentsList[indexPath.row].firstName
-        cell.detailTextLabel?.text = filterredStudentsList[indexPath.row].lastName
+        cell.textLabel?.text = self.filterredStudentsList[indexPath.row].firstName
+        cell.detailTextLabel?.text = self.filterredStudentsList[indexPath.row].lastName
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        performSegue(withIdentifier: "ToStudentsDetailVC", sender: filterredStudentsList[indexPath.row])
+        performSegue(withIdentifier: "ToStudentsDetailVC", sender: self.filterredStudentsList[indexPath.row])
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
         if editingStyle == .delete {
         
-            removeStudent(stuID: filterredStudentsList[indexPath.row].id)
-            filterredStudentsList.remove(at: indexPath.row)
+            removeStudent(stuID: self.filterredStudentsList[indexPath.row].id)
+            self.filterredStudentsList.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
     
     private func removeStudent(stuID: Int) {
         
-        let stuIndex = bussinessLogic.allStudent?.firstIndex(where: { student in
+        let stuIndex = self.bussinessLogic.allStudent?.firstIndex(where: { student in
             student.id == stuID
         })
         
-        bussinessLogic.allStudent?.remove(at: stuIndex!)
+        self.bussinessLogic.allStudent?.remove(at: stuIndex!)
     }
 }
