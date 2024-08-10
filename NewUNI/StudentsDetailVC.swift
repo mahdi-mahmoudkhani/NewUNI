@@ -29,6 +29,23 @@ class StudentsDetailVC: UIViewController {
         
         addCourseButton.isEnabled = newCourseField.text != ""
     }
+    
+    @IBAction func addCourse(_ sender: Any) {
+        
+        if let isThere = student?.selectetedCourse?.contains(where: { $0 == newCourseField.text } ) {
+            
+            return
+        }
+        
+        if student?.selectetedCourse == nil {
+            
+            student?.selectetedCourse = []
+        }
+        
+        student?.selectetedCourse?.append(newCourseField.text!)
+        newCourseField.text = ""
+        tableView.reloadData()
+    }
 }
 
 extension StudentsDetailVC: UITabBarDelegate, UITableViewDataSource {

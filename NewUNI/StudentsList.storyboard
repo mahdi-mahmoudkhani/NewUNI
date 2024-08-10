@@ -178,6 +178,9 @@
                                 <rect key="frame" x="203" y="678" width="160" height="39"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Add Course"/>
+                                <connections>
+                                    <action selector="addCourse:" destination="3WA-gc-nQi" eventType="touchUpInside" id="os1-gX-72U"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TZI-03-bJp"/>
